@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- react 라이브러리 -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- babel  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      //리액트 컴포넌트(화면 선언)
+      //리액트는 컴포넌트를 함수로 선언하는 방법과 클래스로 선언하는 방법을 제공함
+      //요즘은 함수로 만드는 걸 더 선호하긴 함
+      let Hello = function (props) {
+        //이 컴포넌트가 화면에 나올 때 UI를 지정해 줘야 한다.
+        //함수의 리턴값이 화면이다..
+        //html태그가 있어야 한다.. 그것을 js내에서 html 표현식(JSX)로 준비
+        //브라우저의 js engine은 JSX를 인지 못해서 꼭 babel이 있어야 함
+
+        return <h1>Hello, world!</h1>;
+      };
+      //선언된 컴포넌트를 화면에 출력..
+      //개발자가 만든 컴포넌트(<Hello>) 이것도 태그로 사용(JSX)
+      ReactDOM.createRoot(Document.getElementById("app")).render(<Hello />);
+    </script>
+  </head>
+  <body>
+    <!-- react같은 프레임워크로 화면을 구성하면 body에 html tag가 많이 명시되지 않음 -->
+    <div id="app"></div>
+  </body>
+</html>

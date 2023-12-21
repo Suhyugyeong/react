@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      var Title = function (props) {
+        return (
+          <div>
+            {/*jsx 내에서 동적 데이터가 들어가는 영역*/}
+            <h2>{props.title}</h2>
+            <hr />
+          </div>
+        );
+      };
+
+      var TodoList = function (props) {
+        //매개변수로 배열 데이터가 전달 될 것임
+        var todollost = props.todos.map((item, index) => {
+          let status = "";
+          if (item.done == true) status = "완료";
+          else status = "진행";
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
