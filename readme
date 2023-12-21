@@ -1,0 +1,26 @@
+//캐싱 지우기
+
+> npm uninstall -g create-react-app
+> npm cache clean --force
+> npm cache verify
+
+//프로젝트 만들기
+
+> npx create-react-app lab1-cra-app3
+
+//프로젝트 폴더로 이동
+
+> cd ~~~
+
+//react 프로젝트의 내장 서버에서.. 구동
+//hot deploy 도 제공된다..
+
+> npm run start
+
+//개발 완료 되었다.. 운용서버로 빌드 시켜서 넘겨야 한다..
+//모든 js, css 등이 하나로 결합되어서, 압축되어서..
+
+> npm run build
+
+build 라는 폴더가 자동으로 만들어지고.. 산출물이 그 안에 들어간다..
+build 폴더에 있는 것을 운용서버에 배포하면 된다..
