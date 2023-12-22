@@ -24,3 +24,15 @@
 
 build 라는 폴더가 자동으로 만들어지고.. 산출물이 그 안에 들어간다..
 build 폴더에 있는 것을 운용서버에 배포하면 된다..
+
+
+------------------------------------12월22일 금요일
+>npm init vite lab2-vite-app -- --template react
+>cd lab2-vite-app
+>npm install
+>npm run dev
+
+index.html => index.jsx ==> App.jsx
+
+//5.x.x - 5버전의 최신버전..
+>npm i bootstrap@5.x.x
