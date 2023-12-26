@@ -1,0 +1,11 @@
+>npm init vite lab-vite-app -- --template react
+>cd lab-vite-app
+>npm install
+>npm install bootstrap@5.x.x
+>npm run dev
+
+//styled - component
+//styled-component 를 적용하려면 tagged template literal 기법으로
+//동적 styled component 를 만들수 있는 함수가 있어야 해서.. 
+//div`  ` ==> div 컴포넌트를 동적 스타일을 적용해 만들어내는 함수..
+>npm install styled-components @types/styled-components
