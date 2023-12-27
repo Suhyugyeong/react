@@ -12,7 +12,9 @@ const TodoListItem = (props) => {
       {/* li 요소에 동적으로 결정된 클래스 이름을 적용합니다. */}
       <span
         className={props.todoItem.done ? "todo-done pointer" : "pointer"}
+        //props.todoItem.done이 true일 경우 "todo-done pointer" 클래스를, 그렇지 않을 경우 "pointer" 클래스를 적용합
         onClick={() => props.toggleDone(props.todoItem.no)}
+        //클릭 이벤트가 발생하면 props.toggleDone 함수를 호출하며, 해당 함수에는 props.todoItem.no를 전달합니다.
       >
         {props.todoItem.todo}
         {props.todoItem.done ? "(완료)" : ""}
@@ -33,3 +35,4 @@ TodoListItem.propTypes = {
   deleteTodo: PropTypes.func,
 };
 export default TodoListItem;
+//삭제 및 완료 토글 기능을 수행하는 함수들을 부모 컴포넌트로부터 전달받아 사용합니다.

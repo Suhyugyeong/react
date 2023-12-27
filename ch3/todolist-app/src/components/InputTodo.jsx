@@ -29,6 +29,7 @@ const InputTodo = (props) => {
   const changeTodo = (e) => {
     //유저가 input 에서 글을 입력하는 순간..
     setTodo(e.target.value);
+    //e.target.value를 통해 입력된 텍스트를 가져와 setTodo를 통해 todo 상태를 업데이트합니다.
   };
 
   return (
@@ -44,6 +45,8 @@ const InputTodo = (props) => {
             value={todo}
             onChange={changeTodo}
             onKeyUp={enterInput}
+            // value 속성에는 todo 상태가 바인딩되어 있어 입력 필드의 값이 상태와 동기화됩니다.
+            //onChange 이벤트에는 changeTodo 함수를, onKeyUp 이벤트에는 enterInput 함수를 연결합니다.
           />
           <span
             className="btn btn-primary input-group-addon"
