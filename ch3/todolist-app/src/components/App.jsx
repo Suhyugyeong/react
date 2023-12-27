@@ -21,6 +21,7 @@ const App = (props) => {
     </div>
   );
 };
+
 App.propTypes = {
   todoList: PropTypes.array,
   addTodo: PropTypes.func,

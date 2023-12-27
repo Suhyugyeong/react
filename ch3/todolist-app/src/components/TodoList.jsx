@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import TodoListItem from "./TodoListItem";
 
 const TodoList = (props) => {
-  //데이터 개수만큼 하위 컴포넌트 준비
+  //데이터 갯수 만큼 하위 컴포넌트 준비..
   let items = props.todoList.map((item) => {
-    //주의.. 동일한 컴포넌트가 여러개 나열된다면, 컴포넌트를 식별하기 위한 key를 명시해주어야 한다
-    //key는 우리 코드의 알고리즘과는 전혀 관련이 없다..
+    //동일한 컴포넌트가 여러개 나열된다면.. 컴포넌트를 식별하기 위한 key 를 명시해줘야..
+    //key 는 우리 코드의 알고리즘과는 전혀 관련이 없다..
     return (
       <TodoListItem
         key={item.no}
@@ -15,6 +15,7 @@ const TodoList = (props) => {
       />
     );
   });
+
   return (
     <div className="row">
       <div className="col">
