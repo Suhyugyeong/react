@@ -16,8 +16,14 @@ const UncontrolledComponent = () => {
     //real dom으로 접근해야 한다..
     //elemX.current 현재 이 식별자로 식별되는 real dom current는 예약어구요
     let x1 = parseInt(elemX.current ? elemX.current.defaultValue : "", 10);
+    //elemX의 ref 객체의 current 속성을 참조한다..
+    //parseInt 반환된 문자열을 ...10 진수 정수로 변환한다..
+    //삼항 연산자를 사용하여 첫 번째 입력 필드의 ref 객체가 존재하면
+    //(elemX.current이 truthy한 경우) elemX.current.defaultValue를 반환하고,
+    //그렇지 않으면 빈 문자열("")을 반환합니다.
     let y1 = parseInt(elemY.current ? elemY.current.defaultValue : "", 10);
     if (isNaN(x1)) x1 = 0;
+    //parseInt는 변환할 수 없는 문자열이 주어지면 NaN을 반환함
     if (isNaN(y1)) y1 = 0;
     setX(x1);
     setY(y1);
