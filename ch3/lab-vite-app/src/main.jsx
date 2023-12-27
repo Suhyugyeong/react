@@ -9,6 +9,7 @@ import CSSTest from "./lab1-style/Lab1_CSSTest.jsx";
 import StyledComponent from "./lab2-styled-component/Lab2_StyledComponent.jsx";
 import PropTypeComponent from "./lab3-props-type/Lab3_propType.jsx";
 import EventComponent from "./lab4-event/Lab4-EventComponent.jsx";
+import ContainerComponent from "./lab5-container-component/ContainerComponent.jsx";
 // 여기 import해주고요
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -17,8 +18,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <CSSTest /> */}
     {/* <StyledComponent /> */}
     {/* <PropTypeComponent /> */}
-    <EventComponent />
+    {/* <EventComponent /> */}
     {/* 여기 안 붙으면 화면에 안 나와요!! */}
+    <ContainerComponent />
   </React.StrictMode>
 );
 

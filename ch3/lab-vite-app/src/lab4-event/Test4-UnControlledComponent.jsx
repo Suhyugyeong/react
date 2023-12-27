@@ -1,4 +1,8 @@
 import React, { useState, useRef } from "react";
+//주어진 코드는 React를 사용한 함수형 컴포넌트로,
+//비제어 컴포넌트(Uncontrolled Component)를 구현한 것입니다.
+//비제어 컴포넌트는 React의 상태(state)를 사용하지 않고,
+//대신에 실제 DOM 요소에 직접적으로 접근하여 상호 작용하는 방식을 의미합니다.
 
 //real dom에 들어가니까, 이 유저 입력값을 얻어내려면 real dom으로 가야한다..
 
