@@ -1,6 +1,7 @@
 import EventBinding from "./Test1-EventBinding";
 import AsyncStateChange from "./Test2-AsyncStateChange";
 import ControlledComponent from "./Test3-ControlledComponent";
+import UncontrolledComponent from "./Test4-UnControlledComponent";
 
 const EventComponent = () => {
   return (
@@ -8,6 +9,7 @@ const EventComponent = () => {
       <EventBinding />
       <AsyncStateChange />
       <ControlledComponent />
+      <UncontrolledComponent />
     </div>
   );
 };

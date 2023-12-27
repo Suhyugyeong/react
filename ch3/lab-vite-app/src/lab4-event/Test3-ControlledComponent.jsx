@@ -19,7 +19,8 @@ const ControlledComponent = () => {
       </p>
       <p>
         controlled : <input type="text" value={"kim"} />
-        {/* value에 기본 kim이 찍혀있음... 입력이 안 됨 */}
+        {/* value에 기본 kim이 찍혀있음... 입력이 안 됨 
+        일단 value를 주면 controlled component임*/}
       </p>
       <p>
         {/* value값이 이 컴포넌트의 데이터로 명시, 이 값이 변경되지 않는한, 
