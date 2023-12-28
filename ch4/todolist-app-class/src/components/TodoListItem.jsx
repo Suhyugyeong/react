@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 class TodoListItem extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.todoItem !== this.props.todoItem) return true;
+    else return false;
+  }
   render() {
     console.log("##TodoListItem render...");
     let itemClassName = "list-group-item";

@@ -3,6 +3,13 @@ import TodoListItem from "./TodoListItem";
 import React from "react";
 
 class TodoList extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextProps.todoList !== this.props.todoList)
+      //새로운게 전달되면
+      return true;
+    else return false;
+  }
+
   render() {
     console.log("##TodoList render...");
     let items = this.props.todoList.map((item) => {
