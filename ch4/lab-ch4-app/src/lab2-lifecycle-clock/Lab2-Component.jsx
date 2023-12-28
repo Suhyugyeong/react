@@ -18,6 +18,7 @@ class ClockApp extends React.Component {
         </button>
         <hr />
         {this.state.clockVisible ? <Clock formatString={"HH:mm:ss"} /> : ""}
+        {/* true일 때는 Clock 컴포넌트가 렌더링되고, false일 때는 아무것도 렌더링되지 않습니다.  */}
       </div>
     );
   }
