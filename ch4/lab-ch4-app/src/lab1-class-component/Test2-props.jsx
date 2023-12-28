@@ -8,7 +8,7 @@ class PropsComponent extends React.Component {
   user = {
     name: "kim",
     age: 20,
-  };
+  }; //user 객체
   array = ["hello", "world"];
   render() {
     //여기서 리턴시킨 값이 화면에 보이는거임
@@ -16,6 +16,7 @@ class PropsComponent extends React.Component {
       <div>
         <h2>Props Test</h2>
         <PropsSubComponent
+          //PropsSubComponent를 호출하면서 다양한 프로퍼티를 전달하고 있음
           id="kim"
           num={10}
           bool={true}
@@ -36,12 +37,14 @@ class PropsSubComponent extends React.Component {
            클래스 컴포넌트로 만들면 우리가 선언하지 않아도 내부적으로 props로 선언되어 상위 데이터가 담겨져 있음
            this,props로 이용 필수*/}
           id: {this.props.id}, num: {this.props.num}, bool:{this.props.bool}
+          {/* this.props를 통해 상위 컴포넌트에서 전달된 데이터를 사용합니다. */}
         </p>
         <p>
           name:{this.props.obj["name"]}, age:{this.props.obj["age"]}
         </p>
         <p>
           {this.props.array.map((item) => (
+            // array.map을 사용하여 배열의 각 아이템을 <p> 태그로 감싸서 표시합니다.
             <p>{item}</p>
           ))}
         </p>
@@ -72,3 +75,5 @@ PropsSubComponent.propTypes = {
 //실전에서는 하나의 컴포넌트를 하나의 파일에 넣어서 유지/보수 쉽게 한다..
 
 export default PropsComponent;
+
+// React 클래스 컴포넌트 내에서 사용되는 this는 해당 클래스 인스턴스를 가리킵니다.
