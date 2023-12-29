@@ -1,17 +1,16 @@
+import React from "react";
 import PropTypes from "prop-types";
 import TodoListItem from "./TodoListItem";
-import React from "react";
 
-class TodoList extends React.Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.todoList !== this.props.todoList)
-      //새로운게 전달되면
-      return true;
-    else return false;
-  }
+class TodoList extends React.PureComponent {
+  // shouldComponentUpdate(nextProps, nextState){
+  //   if(nextProps.todoList !== this.props.todoList) return true
+  //   else return false
+  // }
 
   render() {
-    console.log("##TodoList render...");
+    console.log("## TodoList render...");
+
     let items = this.props.todoList.map((item) => {
       return (
         <TodoListItem
