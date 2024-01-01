@@ -5,9 +5,11 @@ const ControlledComponent = () => {
   const [y, setY] = useState(0);
 
   const changeValue = (e) => {
+    //이벤트 객체 e를 매개변수로 받습니다.
     let newValue = parseInt(e.target.value); //현재 이벤트가 발생한 객체input의 값
     if (isNaN(newValue)) newValue = 0;
     if (e.target.id === "x") setX(newValue);
+    //현재 이벤트가 발생한 요소의 id를 확인합니다.
     else setY(newValue);
   };
 

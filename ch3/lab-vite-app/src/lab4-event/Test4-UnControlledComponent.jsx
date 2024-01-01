@@ -33,6 +33,8 @@ const UncontrolledComponent = () => {
   //real dom의 식별자로 할당할 값
   const elemX = useRef(null);
   const elemY = useRef(null);
+  //useRef를 사용하여 새로운 Ref 객체를 생성하고, 이 객체를 elemX라는 변수에 할당하는 것을 의미합니다. 초기 값으로 null이 지정되어 있습니다.
+  //useRef로 생성된 Ref 객체는 .current 속성을 통해 현재 참조하고 있는 값을 가지고 있습니다. 예를 들어, elemX.current는 현재 참조하고 있는 DOM 요소를 나타냅니다. 초기에는 null이므로, 실제 DOM 요소에 대한 참조를 할당하기 전에는 elemX.current는 null입니다.
 
   return (
     <div>
