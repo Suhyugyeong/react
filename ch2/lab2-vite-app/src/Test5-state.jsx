@@ -12,6 +12,7 @@ const MusicItem = (props) => {
 
 const MusicList = (props) => {
   const list = props.music;
+  //props.music에서 music은 부모 컴포넌트에서 MusicList 컴포넌트로 전달한 속성 중 하나입니다.
   let items = list.map((item, index) => {
     return <MusicItem key={item.no} item={item} />;
   });
@@ -39,9 +40,12 @@ const StateTest = () => {
   const changeList = () => {
     //상태값 변경
     list.unshift(list.pop());
+    //changeList 함수는 현재 배열의 마지막 요소를 배열의 맨 앞으로 이동시킵니다. 이때, 배열을 직접 수정하지 않고 새로운 배열을 생성하여 업데이트합니다.
     //상태값 변경에 의해 rerender되는 순간,
     //꼭 setter 함수를 이용해야 내부적으로 rerender가 됨
     setList([...list]);
+    //직접적으로 list 배열을 업데이트하는 것이 아니라, 기존 배열의 복사본을 만들어 사용합니다. 이는 React에서 상태를 변경할 때, 불변성을 유지하는데 도움이 됩니다.
+    // 스프레드 연산자를 사용하여 기존 배열의 모든 요소를 새로운 배열에 복사합니다.
   };
   return (
     <div>
@@ -52,8 +56,12 @@ const StateTest = () => {
       <p>{count}</p>
       <button onClick={changeList}>change list</button>
       <button onClick={() => setCount(count + 1)}>change count</button>
+      {/* 여기 왜 count + 1이어야 하는지?? */}
     </div>
   );
 };
 
 export default StateTest;
+
+//스프레드 연산자(...)는 배열이나 객체의 요소를 펼쳐서 새로운 배열이나 객체를 만드는 연산자입니다.
+//이 연산자를 사용하면 기존 배열이나 객체를 변경하지 않고 복사본을 생성할 수 있습니다.
