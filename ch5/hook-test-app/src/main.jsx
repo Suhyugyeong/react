@@ -9,7 +9,9 @@ import "bootstrap/dist/css/bootstrap.css";
 // import ArrayReduceComponent from "./lab3-array-reduce/ArrayReduce";
 // import UseReducerComponent from "./lab4-useReducer/UseReducerTest";
 //여기 위치가 좀 다를거임
-import UseRefComponent from "./lab5-UseRef/UseRef";
+// import UseRefComponent from "./lab5-UseRef/UseRef";
+import UseMemoCallbackComponent from "./lab6-mamo-callback/UseMemoCallbackTest";
+import CustomHookComponent from "./lab7-custom-hook/CustomHook";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,6 +19,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     {/* <UseEffectComponent /> */}
     {/* <ArrayReduceComponent /> */}
     {/* <UseReducerComponent /> */}
-    <UseRefComponent />
+    {/* <UseRefComponent /> */}
+    {/* <UseMemoCallbackComponent /> */}
+    <CustomHookComponent />
   </React.StrictMode>
 );
