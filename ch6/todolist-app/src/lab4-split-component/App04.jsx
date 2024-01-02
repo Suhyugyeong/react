@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import TodoList from "./TodoList";
 import { useCallback } from "react";
 
-const App04 = () => {
+const App03 = () => {
   const [todoList, setTodoList] = useState([]);
   const [todo, setTodo] = useState("");
 
@@ -40,4 +40,4 @@ const App04 = () => {
   );
 };
 
-export default App04;
+export default App03;
