@@ -22,7 +22,7 @@ const SongDetail = (props) => {
   //전체 목록중에서 url param 에 해당되는 데이터를 추출해서 사용..
   useEffect(() => {
     const song = props.songs.find(
-      (song) => song.id == parseInt(id ? id : "", 10)
+      (song) => song.id == parseInt(id ? id : "", 10) //10진수 사용
     );
     if (song) {
       setLink(song.youtube_link ? YOUTUBE_LINK + song.youtube_link : "");
@@ -52,3 +52,8 @@ const SongDetail = (props) => {
 };
 
 export default SongDetail;
+
+//useParams는 React Router에서 제공하는 커스텀 훅(custom hook) 중 하나로, 동적인 URL 파라미터를 추출하는 데 사용됩니다. React Router v6에서 도입되었으며, 함수 컴포넌트에서 사용할 수 있는 편리한 기능입니다.
+//일반적으로 동적인 URL을 다룰 때, 예를 들어 /users/:id와 같은 형태의 URL에서 :id 부분이 동적인 값으로 바뀔 수 있습니다. useParams를 사용하면 이러한 동적인 값을 쉽게 추출할 수 있습니다.
+
+//useNavigate는 React Router v6에서 제공하는 커스텀 훅 중 하나로, 프로그래밍 방식으로 라우터를 조작할 수 있게 해주는 훅입니다. 이 훅을 사용하면 React 컴포넌트에서 코드를 통해 다른 경로로 이동하거나 라우팅을 제어할 수 있습니다.

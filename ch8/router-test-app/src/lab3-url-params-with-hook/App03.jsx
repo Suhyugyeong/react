@@ -76,7 +76,9 @@ const App03 = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About title={"뉴진스"} />} />
+          {/* / 경로는 <Home /> 컴포넌트를 렌더링하고, /about 경로는 title prop으로 "뉴진스" 값을 전달하여 <About /> 컴포넌트를 렌더링합니다. */}
           <Route path="/members" element={<Members members={members} />} />
+          {/* /members 경로는 members prop으로 배열을 전달하여 <Members /> 컴포넌트를 렌더링합니다. */}
           <Route path="/songs" element={<SongList songs={songs} />} />
           {/* :id 의 id 와 컴포넌트에서 useParams() 로 획득한 변수명이 동일해야 */}
           <Route path="/songs/:id" element={<SongDetail songs={songs} />} />

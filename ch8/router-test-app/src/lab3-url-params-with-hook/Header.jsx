@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+//react-router-dom 패키지의 Link 컴포넌트는 React 애플리케이션에서 내비게이션을 처리하는 데 사용됩니다.
+//이 컴포넌트를 사용하면 사용자가 클릭했을 때 새로운 경로로 이동할 수 있습니다.
 
 const Header = () => {
   return (
