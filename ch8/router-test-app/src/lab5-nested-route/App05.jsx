@@ -8,6 +8,7 @@ import SongList from "./SongList";
 import Members from "./Members";
 // import SongDetail from "./SongDetail";
 import Player from "./Player";
+import Default from "./Default";
 
 const App05 = () => {
   const [members] = useState([
@@ -80,6 +81,9 @@ const App05 = () => {
           <Route path="/members" element={<Members members={members} />} />
           {/* 라우팅 정보를 중첩 시켜서.. outer 안에 inner 나오게.. */}
           <Route path="/songs" element={<SongList songs={songs} />}>
+            {/* path 조건이 outer 컴포넌트가 실행되는 조건인 경우 기본으로 <Outlet/> 위치에 출력될 컴포넌트 지정
+            index는 예약어임*/}
+            <Route index element={<Default />} />
             <Route path=":id" element={<Player songs={songs} />} />
           </Route>
         </Routes>
