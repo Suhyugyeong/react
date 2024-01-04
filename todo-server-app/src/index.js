@@ -9,6 +9,8 @@ import routes from "./routes";
 const app = express();
 
 //cross domain 문제 해결.. 아래처럼 cors모듈을 등록하는 것만으로 response header 조정
+//크로스 도메인 이슈를 해결하는 방법 중 하나는 서버 측에서 CORS(Cross-Origin Resource Sharing) 헤더를 설정하는 것입니다. 이를 통해 특정 도메인에서의 요청이나 자원 접근을 허용할 수 있습니다.
+//또는 프록시를 사용하여 같은 도메인으로 보이도록 데이터를 전달할 수도 있습니다.
 // app.use(cors());
 
 app.use(function (req, res, next) {
