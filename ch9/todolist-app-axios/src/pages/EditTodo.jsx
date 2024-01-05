@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-
 const EditTodo = ({ callbacks, states }) => {
   const navigate = useNavigate();
   let { id } = useParams();
-  let todoItem = states.todoList.find((item) => item.id === parseInt(id ? id : "0"));
+  let todoItem = states.todoList.find(
+    (item) => item.id === parseInt(id ? id : "0")
+  );
   if (!todoItem) {
     navigate("/todos");
     return <></>;
@@ -18,8 +19,9 @@ const EditTodo = ({ callbacks, states }) => {
       return;
     }
     let { id, todo, desc, done } = todoOne;
-    callbacks.updateTodo(id, todo, desc, done);
-    navigate("/todos");
+    callbacks.updateTodo(id, todo, desc, done, () => {
+      navigate("/todos");
+    });
   };
 
   return (
@@ -56,14 +58,24 @@ const EditTodo = ({ callbacks, states }) => {
             <input
               type="checkbox"
               checked={todoOne.done}
-              onChange={(e) => setTodoOne({ ...todoOne, done: e.target.checked })}
+              onChange={(e) =>
+                setTodoOne({ ...todoOne, done: e.target.checked })
+              }
             />
           </div>
           <div className="form-group">
-            <button type="button" className="btn btn-primary m-1" onClick={updateTodoHandler}>
+            <button
+              type="button"
+              className="btn btn-primary m-1"
+              onClick={updateTodoHandler}
+            >
               수 정
             </button>
-            <button type="button" className="btn btn-primary m-1" onClick={() => navigate("/todos")}>
+            <button
+              type="button"
+              className="btn btn-primary m-1"
+              onClick={() => navigate("/todos")}
+            >
               취 소
             </button>
           </div>
